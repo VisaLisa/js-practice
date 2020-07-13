@@ -1,4 +1,4 @@
-//example 1
+//example 1 if/else if/ else statements
 
 if (1 === 1) {
     console.log("It's True!");
@@ -19,5 +19,33 @@ else {
     console.log ("Invalid rating")
 }
 
-//example 2
+//example 2 
+let highScore = 1430;
+let userScore = 1000;
 
+if (userScore >= highScore) {
+    console.log('Congrats, you have a new high score of ' + userScore);
+    highScore = userScore;
+}
+else if (highScore >= userScore) {
+    console.log('Try to beat the High Score of ' + highScore + '. Your score was ' + userScore);
+}
+
+else{
+    console.log('Score Error');
+}
+
+// example 3 - nesting conditional
+let password = 'AHdfhnoifgd';
+
+if (password.length >= 6) {
+    if (password.indexOf(' ') === -1) {
+        console.log('Valid Password!');
+    }    
+    else {
+        console.log('Password is long enough, but cannot contain spaces');
+    }
+}
+else {
+    console.log('Password must be longer!');
+}

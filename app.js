@@ -49,3 +49,24 @@ if (password.length >= 6) {
 else {
     console.log('Password must be longer!');
 }
+
+// example 4 - FALSY/TRUTHY
+let loggedInUser = true;
+
+if (loggedInUser) {
+    console.log('You are logged in!');
+}
+else {
+    console.log('Please log in');
+}
+
+// example 5 - Logical AND (&&)
+
+let password1 = 'Aghdd';
+
+if (password1.length >= 8 && password1.indexOf(' ') === -1) {
+    console.log('Valid Password');
+}    
+else {
+    console.log('Invalid Password');
+}

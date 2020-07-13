@@ -70,3 +70,26 @@ if (password1.length >= 8 && password1.indexOf(' ') === -1) {
 else {
     console.log('Invalid Password');
 }
+
+//  example 6 - Logical or (||)
+
+let age = 64;
+
+if (age < 6 || age >=65) {
+    console.log("You get in for free");
+}
+else {
+    console.log('You must pay');
+}
+
+// example 7 - Logical Not (!); both functions below are the same output
+
+let flavor = "banana";
+
+if (flavor !== 'grape'  && flavor !== 'cherry') {
+    console.log('We do not have that flavor');
+}
+
+if (!(flavor === 'grape' || flavor === 'cherry')) {
+    console.log('We do not have that flavor');
+}

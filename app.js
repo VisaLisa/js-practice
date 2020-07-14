@@ -124,3 +124,21 @@ switch (day) {
         console.log('Invalid day');
 }
 
+// ternary operator
+
+let status = 'offline';
+
+// let color;
+// if(status === 'offline') {
+//     color = 'red';
+// }
+// else {
+//     color = 'green';
+// }
+
+let color = status === 'offline' ? 'red' : 'green';
+
+// array
+
+let shop = ['apples','cookies','cans']
+console.log(shop)

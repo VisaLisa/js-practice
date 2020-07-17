@@ -147,7 +147,10 @@ console.log(shoppingList[1]);
 //add potatoes to the list
 shoppingList[shoppingList.length] = 'potatoes';
 
-//push and pop
+// JAVASCRIPT METHOD!!
+
+//push - adding items into list
+//pop - remove item from list
 
 shoppingList.push('bath salts');
 shoppingList.pop('');
@@ -156,3 +159,5 @@ console.log("This is the shopping list: "+ shoppingList + " totaling " + shoppin
 let dishesToDo = ['big platter', 'mug', 'small plate']
 //unshift - add item to the end of array
 dishesToDo.unshift('large plate')
+//shift - remove item from array
+dishesToDo.shift('mug')

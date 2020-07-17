@@ -161,3 +161,25 @@ let dishesToDo = ['big platter', 'mug', 'small plate']
 dishesToDo.unshift('large plate')
 //shift - remove item from array
 dishesToDo.shift('mug')
+
+//Concatenating arrays
+
+let num1 = [1,2,3];
+let num2 = [4,5,6];
+let num3 = [7,8,9];
+
+let new_arraynum = num1.concat(num2,num3);
+
+// includes array - searches for item within array and determines true/false 
+if (num1.includes(3)){
+    console.log('There is a 3');
+}
+
+//indexOf will show which number the value is in the array
+num3.indexOf(8)
+
+//sort array
+
+let people = ['Tim', 'Joe','Iver','Sam'];
+
+people.sort()

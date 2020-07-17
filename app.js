@@ -189,5 +189,17 @@ people.sort();
 people.splice(1,0,'Bob');
 
 //using splice to remove
-people.splice(3,2)
+//people.splice(3,2)
 
+//using splice to replace
+//people.splice(3,2,'arron','eric')
+
+// OBJECT SECTION
+
+const Lisa (
+    height: 62;
+    weight: 150; 
+    city: 'Seattle';
+    isAdmin: true;
+    age: 29; 
+)

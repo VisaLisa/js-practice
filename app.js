@@ -140,5 +140,19 @@ let color = status === 'offline' ? 'red' : 'green';
 
 // array
 
-let shop = ['apples','cookies','cans']
-console.log(shop)
+let shoppingList = ['apples','cookies','cans'];
+// what's the 2nd item in the array
+console.log(shoppingList[1]);
+
+//add potatoes to the list
+shoppingList[shoppingList.length] = 'potatoes';
+
+//push and pop
+
+shoppingList.push('bath salts');
+shoppingList.pop('');
+console.log("This is the shopping list: "+ shoppingList + " totaling " + shoppingList.length+ " items");
+
+let dishesToDo = ['big platter', 'mug', 'small plate']
+//unshift - add item to the end of array
+dishesToDo.unshift('large plate')

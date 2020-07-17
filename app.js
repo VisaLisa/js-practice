@@ -182,4 +182,12 @@ num3.indexOf(8)
 
 let people = ['Tim', 'Joe','Iver','Sam'];
 
-people.sort()
+people.sort();
+
+//using splice to insert in the middle of array
+
+people.splice(1,0,'Bob');
+
+//using splice to remove
+people.splice(3,2)
+

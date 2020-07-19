@@ -202,4 +202,14 @@ const Lisa (
     city: 'Seattle';
     isAdmin: true;
     age: 29; 
+    grade: {
+        midterm: 80;
+        final: 100;
+    }
 )
+
+//loops
+for(let i =1; i <= 10; i += 3){
+    console.log('Hello:', i);
+}
+

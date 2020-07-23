@@ -253,15 +253,52 @@ for (let i = 0; i <= examScores.length; i++){
     console.log(i, examScores[i]);
 };
 
-function rollDice () {
+//function greet()
+function greet(name){
+    console.log(`Hello, ${name}`);
+}
+
+
+function rollDice() {
     let roll = Math.floor(Math.random() * 6) + 1;
     console.log(`Rolled: ${roll}`);
 }
 
-function throwDice(){
-    rollDice();
-    rollDice();
-    rollDice();
-    rollDice();
-    rollDice();
+function throwDice(numRolls){
+    for (let i = 0; i < numRolls; i++){
+        rollDice();
+    }
+}
+
+function square(num) {
+    console.log(num * num);
+}
+
+function sum (x,y) {
+    console.log(x + y);
+}
+
+function divide(a,b){
+    console.log(a / b);
+}
+function containsPurple(arr){
+    for (let color of arr) {
+        if (color === 'purple' || color ==='magenta') {
+            return true;
+        }
+    }
+    return false;
+}
+
+function isValidPassword(password, username) {
+    if(password.length > 8 ) {
+        return false;
+    }
+    if(password.indexOf(' ') !== -1){
+        return false;
+    }
+    if(password.indexOf(username) !== -1){
+        return false;
+    }
+    return true;
 }

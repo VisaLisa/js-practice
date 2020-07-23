@@ -100,28 +100,28 @@ let day = Blob;
 
 switch (day) {
     case 1:
-        console.log('Monday');
-        break;
+    console.log('Monday');
+    break;
     case 2:
-        console.log('Tuesday');
-        break;
+    console.log('Tuesday');
+    break;
     case 3:
-        console.log('Wednesday');
-        break;
+    console.log('Wednesday');
+    break;
     case 4:
-        console.log('Thursday');
-        break;
+    console.log('Thursday');
+    break;
     case 5:
-        console.log('Friday');
-        break;
+    console.log('Friday');
+    break;
     case 6:
-        console.log('Saturday');
-        break;
+    console.log('Saturday');
+    break;
     case 7:
-        console.log('Sunday');
-        break;
+    console.log('Sunday');
+    break;
     default:
-        console.log('Invalid day');
+    console.log('Invalid day');
 }
 
 // ternary operator
@@ -216,27 +216,27 @@ for (let bet = 1; bet <= 10; bet += 3){
 // }
 
 const myStudents = [
-	{
-		firstName : 'Zeus',
-		grade     : 86
-	},
-	{
-		firstName : 'Artemis',
-		grade     : 97
-	},
-	{
-		firstName : 'Hera',
-		grade     : 72
-	},
-	{
-		firstName : 'Apollo',
-		grade     : 90
-	}
+    {
+        firstName : 'Zeus',
+        grade     : 86
+    },
+    {
+        firstName : 'Artemis',
+        grade     : 97
+    },
+    {
+        firstName : 'Hera',
+        grade     : 72
+    },
+    {
+        firstName : 'Apollo',
+        grade     : 90
+    }
 ];
 
 for (let i = 0; i < myStudents.length; i++) {
-	let student = myStudents[i];
-	console.log(`${student.firstName} scored ${student.grade}`);
+    let student = myStudents[i];
+    console.log(`${student.firstName} scored ${student.grade}`);
 }
 
 // let total = 0;
@@ -252,3 +252,16 @@ const examScores = [98, 77, 84, 91, 57, 66];
 for (let i = 0; i <= examScores.length; i++){
     console.log(i, examScores[i]);
 };
+
+function rollDice () {
+    let roll = Math.floor(Math.random() * 6) + 1;
+    console.log(`Rolled: ${roll}`);
+}
+
+function throwDice(){
+    rollDice();
+    rollDice();
+    rollDice();
+    rollDice();
+    rollDice();
+}

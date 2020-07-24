@@ -509,6 +509,7 @@ function makeBetweenFunc(x,y){
 }
 
 const isChild = makeBetweenFunc(0,18);
+const isInNinties = makeBetweenFunc(1990,1999);
 
 
 // const isChild =  function(num) {

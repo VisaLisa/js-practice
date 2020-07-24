@@ -387,3 +387,31 @@ function getCard() {
 	const suits = [ 'clubs', 'spades', 'hearts', 'diamonds' ];
 	return { value: pick(values), suit: pick(suits) };
 }
+
+//block scope
+
+let radius = 0;
+
+if(radius > 0){
+    const PI = 3.14;
+    let circ = 2 * PI * radius;
+}
+
+// console.log(radius);
+// console.log(PI);
+// console.log(circ);
+
+let animals = ['bear','tiger','panda'];
+
+for (var i = 0; i < animals.length; i++){
+    console.log(i, animals[i])
+}
+
+function doubleArr(arr){
+    const result = [];
+    for(let num of arr){
+        let double = num * 2;
+        result.push(double);
+    }
+    return result;
+}

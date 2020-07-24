@@ -290,15 +290,87 @@ function containsPurple(arr){
     return false;
 }
 
+// function isValidPassword(password, username) {
+//     const tooShort = password.length < 8;
+//     const hasSpace = password.indexOf(' ') !== -1;
+//     const tooSimilar = password.indexOf(username) !== -1;
+//     if (!tooShort && !hasSpace && !tooSimilar){
+//     return true;}
+//     return false;
+// } 
+
 function isValidPassword(password, username) {
-    if(password.length > 8 ) {
-        return false;
+    const tooShort = password.length < 8;
+    const hasSpace = password.indexOf(' ') !== -1;
+    const tooSimilar = password.indexOf(username) !== -1;
+    return !tooShort && !hasSpace && !tooSimilar;
+}
+
+function avg(arr){
+    let totalnum = 0;
+    //loop over each num
+    for(let num of arr){
+        //add them together
+        totalnum += num;
     }
-    if(password.indexOf(' ') !== -1){
-        return false;
-    }
-    if(password.indexOf(username) !== -1){
-        return false;
+    //divide by number of num
+    return totalnum / arr.length;
+}
+
+//pangram functions
+//version 1
+
+// function isPangram(sentence){
+//     let lowerCased = sentence.toLowerCase();
+//     for(let char of 'abcdefghijklmnopqrstuvwxyz') {
+//         if (lowerCased.indexOf(char) === -1){
+//             return false;
+//         }
+//     }
+//     return true;
+// }
+
+//version 2
+function isPangram(sentence){
+    let lowerCased = sentence.toLowerCase();
+    for (let char of 'abcdefghijklmnopqrstuvwxyz') {
+        if (!lowerCased.includes(char)){
+            return false;
+        }
     }
     return true;
 }
+
+//playing cards functions
+//write a getCard() function which returns a random playing card object, like: 
+// { 
+//    value: 'K'
+//    suit: 'clubs' 
+// }
+//  pick a random value from: 1-A
+//  pick a random suit from: clubs, spades, hearts, diamonds
+// return both in an object
+
+// function getCard(){
+//     const values =['1','2','3','4','5','6','7','8','9','10','J','Q','K','A'];
+//     const validx = Math.floor(Math.random() * values.length); 
+//     const value = values[validx];
+
+//     const suits = ['clubs', 'spades', 'hearts', 'diamonds'];
+//     const suitIdx = Math.floor(Math.random() * suits.length);
+//     const suit = suits[suitIdx];
+//     return {value, suit};
+// }
+function pick(arr) {
+    const idx = Math.floor(Math.random() * arr.length);
+    return arr(idx);
+}
+
+function getCard() {
+    const values =['1','2','3','4','5','6','7','8','9','10','J','Q','K','A'];
+    const value = pick(values);
+    const suits = ['clubs', 'spades', 'hearts', 'diamonds'];
+    const suit = pick(suits);
+    return { value : value, suit: suit };
+}
+

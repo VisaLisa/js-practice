@@ -501,3 +501,17 @@ function pickOne(f1, f2){
 // const doubleit = multiplyBy(2);
 // const halve = multiplyBy(0.5);
 
+
+function makeBetweenFunc(x,y){
+    return function(num){
+        return num >= x && num <= y;
+    }
+}
+
+const isChild = makeBetweenFunc(0,18);
+
+
+// const isChild =  function(num) {
+//     return num >= 0 && num <= 18;
+// }
+

@@ -274,13 +274,13 @@ function square(num) {
     console.log(num * num);
 }
 
-function sum (x,y) {
-    console.log(x + y);
-}
+// function sum (x,y) {
+//     console.log(x + y);
+// }
 
-function divide(a,b){
-    console.log(a / b);
-}
+// function divide(a,b){
+//     console.log(a / b);
+// }
 function containsPurple(arr){
     for (let color of arr) {
         if (color === 'purple' || color ==='magenta') {
@@ -415,3 +415,89 @@ function doubleArr(arr){
     }
     return result;
 }
+
+//lexical scope
+
+function outer(){
+    let movie = "black panther";
+
+    function inner(){
+        console.log(movie.toUpperCase())
+    }
+    inner();
+}
+
+//calculator
+
+function add(x,y){
+    return x + y;
+}
+
+const substract = function (x, y){
+    return x - y;
+}
+
+const multiply = function (x, y){
+    return x * y;
+}
+
+const divide = function (x, y){
+    return x / y; 
+}
+
+const operations = [add, substract, multiply, divide];
+
+for (let func of operations){
+    let result = func(30,5);
+    console.log(result);
+}
+
+const thing = {
+    dosSomething: multiply
+}
+
+//functions as arguments
+
+// function callThreeTimes(f){
+//     f();
+//     f();
+//     f();
+
+// }
+
+function cry() {
+    console.log("BOO HOO I'M SO SAD!");
+}
+
+function rage(){
+    console.log("WHYYYY!");
+}
+
+function repeatNTimes(action, num){
+    for(let i = 0; i < num; i++){
+        action();
+    }
+}
+
+function pickOne(f1, f2){
+    let rand = Math.random();
+    console.log(rand);
+    if(rand < 0.5) {
+        f1();
+    } else{
+        f2();
+    }
+}
+
+//higher order functions
+
+// function multiplyBy(num){
+//     return function (x) {
+//         return x * num;
+//     }
+// }
+
+// const tripe = multiplyBy(3);
+// const doubleit = multiplyBy(2);
+// const halve = multiplyBy(0.5);
+

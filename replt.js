@@ -83,7 +83,9 @@ function stringIncludes(string, word){
 //   return false;
 // }
 
-// PROBLEM #5
+
+
+//TPROBLEM #5
 // Write a function called stringIndexOf, which accepts two strings: the first is a word and the second is a single character.
 
 // The function should return the first index in the word at which the character exists or -1 if the character is not found.
@@ -93,3 +95,59 @@ function stringIncludes(string, word){
 // Examples:
 //stringIndexOf('awesome', 'e') // 2
 // stringIndexOf('awesome', 'z') // -1
+
+function stringIndexOf(str, char){
+    for(let i = 0; i < str.length; i++){
+      if (str[i] === char){
+        return i;
+      }
+    }
+    return -1;
+  }
+
+  
+//   teacher's solution:
+//   function stringIndexOf(str, char) {
+//     for (let i = 0; i < str.length; i++) {
+//       if (str[i] === char) {
+//         return i;
+//       }
+//     }
+//     // by the time you've reached this line, the loop has examined
+//     //   every single character in the string
+//     return -1;
+//   }
+  
+
+//PROBLEM #6
+// Instructions from your teacher:
+// Write a function called stringLastIndexOf, which accepts two strings: the first is a word and the second is a single character.
+
+// The function should return the last index at which the character exists or -1 if the character is not found.
+
+// Do not use the built in String.lastIndexOf() function!
+
+// Examples:
+// stringLastIndexOf('awesome', 'e'); // 6
+// stringLastIndexOf('awesome', 'z'); // -1
+
+function stringLastIndexOf(word, char){
+    let lastchar = word.slice(-1)[0];
+    if (lastchar === char){
+      return word.length - 1;
+    }
+    return -1;
+  }
+
+//TEACHER'S SOLUTION
+// function stringLastIndexOf(str, char) {
+//     // the approach is the same as the last problem, except
+//     //  the loop goes backwards
+//     for (let i = str.length - 1; i >= 0; i--) {
+//       if (str[i] === char) {
+//         return i;
+//       }
+//     }
+//     return -1;
+//   }
+

@@ -293,3 +293,66 @@ function indexOf(array,number){
 //     return -1;
 //   }
   
+TODO: PROBLEM #11
+
+// Write a function called lastIndexOf, which accepts an array and a number.
+
+// The function should return the last index at which the value exists, or -1 if the value is not found.
+
+// Do not use the built in Array.lastIndexOf() function!
+
+// Examples:
+// lastIndexOf([1, 2, 3, 4], 2); // 1
+// lastIndexOf([1, 2, 3, 4, 2], 2); // 4
+// lastIndexOf([1, 2, 3, 4], 22); // -1
+
+
+function lastIndexOf(array,number){
+    let count = 0;
+    for (let i = 0; i < array.length, i++){
+      if(array(i) === number){
+        return count++;
+      }
+    }
+    return -1;
+  }
+
+// TEACHER'S SOLUTION TO #11
+
+// PROBLEM #12
+// Write a function called push which accepts two parameters, an array and any value. 
+
+// The function should add the value to the end of the array and then return the new length of the array.
+
+// Do not use the built in Array.push() function!
+
+// Examples:
+// var arr = [1, 2, 3];
+// push(arr, 10); // 4
+
+// arr; // [1, 2, 3, 10]
+
+// var secondArr = [5, 2, 1, 6];
+// push(secondArr, 20); // 5
+
+// arr; // [5, 2, 1, 6, 20]
+var arr = [1, 2, 3];
+var secondArr = [5, 2, 1, 6];
+
+function push(array, value){
+  array[array.length] = value;
+  return array.length;
+}
+
+console.log(arr);
+console.log(secondArr);
+
+// TEACHER'S SOLUTION #12
+// function push(arr, value) {
+//     // remember JS arrays are dynamic (in fact, technically they are objects)
+//     //  so you can dynamically assign a new index at arr.length
+//     //   and the length automatically updates
+//     arr[arr.length] = value;
+//     return arr.length;
+//   }
+

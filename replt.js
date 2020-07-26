@@ -70,7 +70,7 @@ function stringIncludes(string, word){
   }
 
 
-//Teacher's solution: 
+//TEACHER'S SOLUTION #4; 
 //function stringIncludes(str, char) {
   // the ES2015 keyword 'let' is preferable for loop iterator variables
   //  since it is scoped to that block
@@ -106,7 +106,7 @@ function stringIndexOf(str, char){
   }
 
   
-//   teacher's solution:
+// TEACHER'S SOLUTION #5
 //   function stringIndexOf(str, char) {
 //     for (let i = 0; i < str.length; i++) {
 //       if (str[i] === char) {
@@ -139,7 +139,7 @@ function stringLastIndexOf(word, char){
     return -1;
   }
 
-//TEACHER'S SOLUTION
+//TEACHER'S SOLUTION #6
 // function stringLastIndexOf(str, char) {
 //     // the approach is the same as the last problem, except
 //     //  the loop goes backwards
@@ -150,4 +150,39 @@ function stringLastIndexOf(word, char){
 //     }
 //     return -1;
 //   }
+
+
+// PROBLEM #7
+// Write a function called repeat, which accepts a string and a number and returns a new string with the string repeated that number of times.
+
+// Do not use the built in repeat method - the tests will fail if you do!
+
+// Examples:
+// repeat('Matt', 3) // 'MattMattMatt'
+// repeat('Elie', 2) // 'ElieElie'
+// repeat('Michael', 0) // '' 
+
+function repeat(str, num){
+    let newString = "";
+    while(num > 0){
+      newString += str;
+      num--;
+    }
+    return newString;
+  }
+
+// TEACHER'S SOLUTION FOR #7
+// function repeat(str, num) {
+
+//     var newStr = '';  // string we will build up
+  
+//     for (let i = 0; i < num; i++) {
+//       // note that this creates a new string every iteration of the loop
+//       //  because JavaScript strings are immutable
+//       newStr += str;
+//     }
+  
+//     return newStr;
+//   }
+
 

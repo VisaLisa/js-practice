@@ -421,21 +421,55 @@ function reverse(arr) {
  *  beginning and going to the middle. Note the middle element
  *  itself does not need to be swapped
  */
-function reverse(arr) {
-    // midpoint is length / 2, floored to account for odd lengths
-    let middle = Math.floor(arr.length / 2);
+// function reverse(arr) {
+//     // midpoint is length / 2, floored to account for odd lengths
+//     let middle = Math.floor(arr.length / 2);
   
-    for (let i = 0; i < middle; i++) {
-      let end = arr.length - 1;
-      // make a temporary variable to store a value closer 
-      //  to the beginning
-      let temp = arr[i];
-      // swap the value closer to the beginning with
-      //  a value the same distance from the end
-      arr[i] = arr[end - i];
-      // swap the value closer to the end with
-      //  the temporary variable
-      arr[end - i] = temp;
+//     for (let i = 0; i < middle; i++) {
+//       let end = arr.length - 1;
+//       // make a temporary variable to store a value closer 
+//       //  to the beginning
+//       let temp = arr[i];
+//       // swap the value closer to the beginning with
+//       //  a value the same distance from the end
+//       arr[i] = arr[end - i];
+//       // swap the value closer to the end with
+//       //  the temporary variable
+//       arr[end - i] = temp;
+//     }
+//     return arr;
+//   }
+
+//PROBLEM #17
+// Write a function called max, which accepts an array and returns the highest value. 
+
+// Do not use the built-in Math.max() function!
+
+// Examples:
+// max([5, 1, 4, 7, 1, 2]); // 7
+// max([3, 4, 12, 1, 8]); // 12
+// max([-1, 6, 3, 2.2, -10, -4]); // 6
+
+function max(arr){
+    var findMax = 0;
+    for(let i=0;i<arr.length;i++){
+      if (arr[i] > findMax){
+        findMax = arr[i];
+      }
     }
-    return arr;
+    return findMax;
   }
+
+//   TEACHER'S SOLUTION #17
+//   function max(arr) {
+//     // we can use the first element as the default 'maximum'
+//     let maximum = arr[0];
+//     // then if we encounter a larger element in the rest of the array,
+//     //   replace the value. Note we can start our loop at index 1
+//     for (var i = 1; i < arr.length; i++) {
+//       if (arr[i] > maximum) {
+//         maximum = arr[i];
+//       }
+//     }
+//     return maximum;
+//   }
